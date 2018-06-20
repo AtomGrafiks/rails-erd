@@ -48,31 +48,31 @@ module RailsERD
         record: "node.record.erb"
       } # @private :nodoc:
 
-      NODE_WIDTH = 130 # @private :nodoc:
+      NODE_WIDTH = 225 # @private :nodoc:
 
       FONTS = Config.font_names_based_on_os
 
       # Default graph attributes.
       GRAPH_ATTRIBUTES = {
         rankdir:     :LR,
-        ranksep:     0.5,
-        nodesep:     0.4,
+        ranksep:     1,
+        nodesep:     1,
         pad:         "0.4,0.4",
-        margin:      "0,0",
-        concentrate: true,
+        margin:      "1,1",
+        concentrate: false,
         labelloc:    :t,
         fontsize:    13,
         fontname:    FONTS[:bold],
-        splines:     'spline'
+        splines:     'ortho'
       }
 
       # Default node attributes.
       NODE_ATTRIBUTES = {
-        shape:    "Mrecord",
-        fontsize: 10,
+        shape:    "record",
+        fontsize: 13,
         fontname: FONTS[:normal],
-        margin:   "0.07,0.05",
-        penwidth: 1.0
+        margin:   "0 0",
+        penwidth: 0.5
       }
 
       # Default edge attributes.
@@ -83,7 +83,7 @@ module RailsERD
         arrowsize:     0.9,
         penwidth:      1.0,
         labelangle:    32,
-        labeldistance: 1.8,
+        labeldistance: 1.8
       }
 
       # Default cluster attributes.
